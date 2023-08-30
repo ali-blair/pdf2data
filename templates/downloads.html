@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<script type ="text/javascript">
+
+var select = [{{ selection[0] }}, {{ selection[1] }}, {{selection[2] }}];
+
+</script>
+
+<center>
+<body>
+
+<h1>Confirmation</h1>
+<form action = "/download" method = "POST" 
+   enctype = "multipart/form-data">
+   Data files generated successfully: Download the data below
+</form>
+
+<h2>Download Links</h2>
+Only the buttons relating to the data you chose will work <br>
+<br><form action="/download" method="POST" 
+    enctype = "multipart/form-data">
+    OCR Data Table: <a name="/download" href="/download"></a><button class='btn btn-default' onclick="this.form.submit(); disabledown();" name="button" disabled>Download</button>
+</form>
+<br><form action = "/download1" method = "POST" 
+    enctype = "multipart/form-data">
+    Text Read Data Table: <a name="/download1" href="/download1"></a><button class='btn btn-default' onclick="this.form.submit(); disabledown1();" name="button1" disabled>Download</button>
+</form>
+<br><form action = "/download2" method = "POST" 
+    enctype = "multipart/form-data">
+    Combined Data Table: <a name="/download2" href="/download2"></a><button class='btn btn-default' onclick="this.form.submit(); disabledown2();" name="button2" disabled>Download</button>
+</form>
+
+<h3>Delete PDF + Data from Server</h3>
+<form action = "/delete" method = "POST" 
+   enctype = "multipart/form-data">
+   Delete Data From Server: <input type = "submit" value ="Delete"/>
+</form>
+
+
+<script type ="text/javascript">
+
+function success() {
+	 if(select[0]=== 1) { 
+            document.getElementsByName("button")[0].disabled = false; 
+        } else { 
+            document.getElementsByName("button")[0].disabled = true;
+        }
+    };
+    
+function disabledown() {
+    const downbut = document.getElementsByName("button")[0];
+    downbut.disabled = true;
+    setTimeout(() => {
+        downbut.disabled = false
+        }, 500);
+    };
+    
+function success1() {
+	 if(select[1]=== 1) { 
+            document.getElementsByName("button1")[0].disabled = false; 
+        } else { 
+            document.getElementsByName("button1")[0].disabled = true;
+        };
+    };
+    
+function disabledown1() {
+    const downbut1 = document.getElementsByName("button1")[0];
+    downbut1.disabled = true;
+    setTimeout(() => {
+        downbut1.disabled = false
+        }, 500);
+    };
+
+function success2() {
+	 if(select[2]=== 1) { 
+            document.getElementsByName("button2")[0].disabled = false; 
+        } else { 
+            document.getElementsByName("button2")[0].disabled = true;
+        }
+    };
+    
+function disabledown2() {
+    const downbut2 = document.getElementsByName("button2")[0];
+    downbut2.disabled = true;
+    setTimeout(() => {
+        downbut2.disabled = false
+        }, 500);
+    };
+
+window.onload=success();
+window.onload=success1();
+window.onload=success2();
+
+</script>
+
+
+</body>
+<center>
+
+</html>
+
+<!--
+
+function disable() {
+    document.getElementsByName("button")[0].disabled = true
+    };
+    
+function disableperf() {
+    setTimeout(disable(), 500)
+    };
+
+function disable1() {
+    document.getElementsByName("button1")[0].disabled = true
+    };
+
+function disable2() {
+    document.getElementsByName("button2")[0].disabled = true
+    }
+
+function success() {
+	 if(document.getElementsByName("/download").value===1) { 
+            document.getElementsByName("button")[0].disabled = false; 
+        } else { 
+            document.getElementsByName("button")[0].disabled = true;
+        }
+    }
+
+function success1() {
+	 if(document.getElementsByName("/download1").value===1) { 
+            document.getElementsByName("button1")[0].disabled = false; 
+        } else { 
+            document.getElementsByName("button1")[0].disabled = true;
+        }
+    }
+
+function success2() {
+	 if(document.getElementsByName("/download2").value===1) { 
+            document.getElementsByName("button2")[0].disabled = false; 
+        } else { 
+            document.getElementsByName("button2")[0].disabled = true;
+        }
+    }
+
+window.onload=success();
+window.onload=success1();
+window.onload=success2();
+
+
+# onkeyup
+
+-->

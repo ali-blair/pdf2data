@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<center>
+  <head>
+    <title>Text Read Data Preview</title>
+  </head>
+  <body>
+  <form action = "/dataframe1" method = "POST" 
+     enctype = "multipart/form-data">
+    <h1>Text Read Data Preview</h1>
+    {% for table in tables %}
+        {{ table|safe }}
+    {% endfor %}
+    </form><br></br> 
+    <!--
+    </form>
+    <form action = "/upload" method = "POST" 
+        enctype = "multipart/form-data">
+    <button class='btn btn-default'>Back</button></a>
+    </form>
+    -->
+    <a href="javascript:window.history.back();">Back</a>
+    
+  </body>
+</center>
+</html>

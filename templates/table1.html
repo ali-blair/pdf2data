@@ -1,0 +1,49 @@
+<!--
+<!DOCTYPE html>
+<html>
+
+<body>
+<form action = "/table" method = "POST" 
+   enctype = "multipart/form-data">
+<table id="demo">
+{% for row in data %}
+  <tr>
+  {% for col in row %}
+  <td>{{ col }}</td>
+  {% endfor %}
+  </tr>
+{% endfor %}
+</table>
+</form>
+
+</body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<center>
+  <head>
+    <title>OCR Data Preview</title>
+  </head>
+  <body>
+  <form action = "/dataframe" method = "POST" 
+     enctype = "multipart/form-data">
+    <h1>OCR Data Preview</h1>
+    {% for table in tables %}
+        {{ table|safe }}
+    {% endfor %}
+    </form><br></br> 
+    <!--
+    </form>
+    <form action = "/upload" method = "POST" 
+        enctype = "multipart/form-data">
+    <button class='btn btn-default'>Back</button></a>
+    </form>
+    -->
+    <a href="javascript:window.history.back();">Back</a>
+    
+  </body>
+</center>
+</html>

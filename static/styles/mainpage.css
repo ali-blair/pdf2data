@@ -1,0 +1,32 @@
+div.a {
+  text-align: center;
+}
+
+div.b {
+  text-align: left;
+}
+
+div.c {
+  text-align: right;
+} 
+
+div.d {
+  text-align: justify;
+} 
+
+div.e {
+  position: absolute;
+  top: 0;
+  left: 35;
+  }
+  
+div.head {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+}
+
+div.img {
+  resize: both;
+  overflow: auto;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+    <title> 
+        JavaScript| Set the value of an input field. 
+    </title> 
+</head> 
+
+<body style="text-align:center;" id="body"> 
+    <input type='text' id='id1' /> 
+    <br> 
+    <br> 
+    <button onclick="gfg_Run()"> 
+        click to set 
+    </button> 
+    <p id="GFG_DOWN" style="color:green; font-size: 20px;font-weight: bold;"></p> 
+
+    <script> 
+        var el_down = document.getElementById("GFG_DOWN"); 
+        var inputF = document.getElementById("id1"); 
+        function gfg_Run() { 
+            inputF.setAttribute('value', 'defaultValue'); 
+            el_down.innerHTML = "Value = " + "'" + inputF.value + "'"; 
+        } 
+    </script> 
+</body> 
+</html> 

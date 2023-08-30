@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<center>
+<h1>Confirmation</h1>
+<form action = "/preview" method = "POST" 
+   enctype = "multipart/form-data">
+   File Uploaded Successfully. <br>
+   
+   </br>Now choose methods (OCR/TEXT) below:
+</form>
+
+<h2>Choose</h2>
+<form action = "/preview" method = "POST" 
+   enctype = "multipart/form-data">
+  <input type="checkbox" id="Method1" name="Method1" value="OCR" onclick="check1()">
+  <label for="vehicle1"> OCR</label><br>
+  <input type="checkbox" id="Method2" name="Method2" value="Text" onclick="check1()">
+  <label for="vehicle2"> Text</label><br>
+  </br><input type = "submit" value="Submit" name="submitter1"/>
+</form> 
+
+<!--
+<br></br>
+<form action = "/return" method = "POST"
+    enctype = "multipart/form-data">
+    <input type="submit" value="Go Back" name="return1"/>
+</form>
+-->
+
+</center>
+
+<script type = "text/javascript">
+
+function check1() {
+	 if(document.getElementsByName("Method1")[0].checked === false && document.getElementsByName("Method2")[0].checked === false) { 
+            document.getElementsByName("submitter1")[0].disabled = true; 
+        } else { 
+            document.getElementsByName("submitter1")[0].disabled = false;
+        }
+    };
+
+
+window.onload=check1();
+
+</script>
+
+
+
+
+</body>
+</html>
