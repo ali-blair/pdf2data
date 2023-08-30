@@ -11,4 +11,5 @@ More on OCR: The pdf is first cropped, then saved as a jpeg which then undergoes
 - [x] Works for pre-defined areas on pdf page (mainly chunks in bottom right) as that was what was required for a specific document I was working with in recent times. The specific document needed chunks of data in boxes from bottom right of pdfs to be extracted.
 - [ ] Allow the user to interact further with the html page and draw boxes onto the inputted pdf (perhaps convert the input to a single jpg page as preview) to identify where exactly on the pdf the user would like to extract data from.
 - [ ] Improve the login design, introduce hashing for privacy and a file in which the user can input usernames and passwords with which they want to allow access to.
+- [ ] Shift over javascript code and functions from within the html pages' scripts to a new .js file located within the \static folder for tidyness
 - [ ] Design web pages to be more visually appealing
