@@ -3,8 +3,8 @@
 <head>
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
 </head>
-
 <body>
+
 
 <center>
 <div class="a">
@@ -17,253 +17,34 @@ Select the PDF you want to have data extracted from, the method of extraction an
     </br><object data="" id="blob1" name="blob1" width="1100" height="766"></object><br>
     
     </br>
-    <!--
-    <b>Submit: </b><input type="submit" value="Submit" name="submitpdf"/><br> -->
     <text 
     </br>
 </div>
-<!-- </form> -->
 </center>
 
 
-
-
-<center>
-<div class="a"><br>
-<b>Choose your PDF File: </b><input type="file" accept=".pdf" name="file" Id = "a" onchange="megafunc(); inputfun();"/><br>
-    <button><a 
-</br><object data="" id="blob1" name="blob1" width="1100" height="766"></object><br>
-</div>
-</center>
-
-
-<!--
-<div class="e">
-<br></br>
-<br></br>
-<div class="b">
-
-<p id= "output"></p>
-</div></div>
-<script type ="text/javascript">
-document.onmousemove= mouseCoordinates;
-
-var output= document.getElementById("output");
-
-function mouseCoordinates(event){
-
-var xPos= event.clientX;
-
-var yPos= event.clientY;
-
-output.innerHTML= "Coordinate (X) : " + xPos + " " + "pixels <br>Coordinate (Y) : " + yPos + " " + "pixels";
-
-}
-
-</script>
--->
-<!--
-<div class="e">
-<br></br>
-<br></br>
-<div class="b">
-
-<button onclick= "mouseCoordinates(event)">Click me to get the Mouse Coordinates</button>
-</div></div>
-<script type ="text/javascript">
-
-function mouseCoordinates(event){
-
-document.write("Coordinate(X) = " + event.clientX + "<br>Coordinate(Y) = " + event.clientY);
-
-}
-
-</script>
--->
-<!--
-<div class="e">
-<br></br>
-<br></br>
-<button name="coords" value="Get Coords"></button>
-<script type ="text/javascript">
-const delta = 6;
-let startX;
-let startY;
-
-element.addEventListener('mousedown', function (event) {
-  startX = event.pageX;
-  startY = event.pageY;
-});
-
-element.addEventListener('mouseup', function (event) {
-  const diffX = Math.abs(event.pageX - startX);
-  const diffY = Math.abs(event.pageY - startY);
-
-  if (diffX < delta && diffY < delta) {
-    // Click!
-  }
-});
-</script>
-</div>
--->
-
-
-
-<!--
-<br></br>
-<br></br>
-<script type ="text/javascript">
-var start = [];
-var end = [];
-
-document.addEventListener('mousedown',function(e){
-    var e = e || event;
-    start = [e.x || e.clientX,e.y || e.clientY];
-});
-document.addEventListener('mouseup',function(e){
-    var e = e || event;
-    end = [e.x || e.clientX,e.y || e.clientY];
-});
-</script>
--->
-
-
-
-
-
-<!--
-<div class="img">
-<br></br>
-<br></br>
-    <canvas id="myCanvas" width="578" height="200"></canvas>
-    <script>
-      var canvas = document.getElementById('myCanvas');
-      var context = canvas.getContext('2d');
-      var imageObj = new Image();
-
-      imageObj.onload = function() {
-        var sourceX = 150;
-        var sourceY = 0;
-        var sourceWidth = 150;
-        var sourceHeight = 150;
-        var destWidth = sourceWidth;
-        var destHeight = sourceHeight;
-        var destX = canvas.width / 2 - destWidth / 2;
-        var destY = canvas.height / 2 - destHeight / 2;
-
-        context.drawImage(imageObj, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
-      };
-      imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
-    </script>  
-<br></br>
-<br></br>
-<img src="https://js.cx/clipart/ball.svg" style="cursor: pointer; position: absolute; z-index: 1000; left: 268px; top: 96px;" width="40" height="40" id="ball">
-<script>
-ball.onmousedown = function(event) {
-
-  let shiftX = event.clientX - ball.getBoundingClientRect().left;
-  let shiftY = event.clientY - ball.getBoundingClientRect().top;
-
-  ball.style.position = 'absolute';
-  ball.style.zIndex = 1000;
-  document.body.append(ball);
-
-  moveAt(event.pageX, event.pageY);
-
-  // moves the ball at (pageX, pageY) coordinates
-  // taking initial shifts into account
-  function moveAt(pageX, pageY) {
-    ball.style.left = pageX - shiftX + 'px';
-    ball.style.top = pageY - shiftY + 'px';
-  }
-
-  function onMouseMove(event) {
-    moveAt(event.pageX, event.pageY);
-  }
-
-  // move the ball on mousemove
-  document.addEventListener('mousemove', onMouseMove);
-
-  // drop the ball, remove unneeded handlers
-  ball.onmouseup = function() {
-    document.removeEventListener('mousemove', onMouseMove);
-    ball.onmouseup = null;
-  };
-
-};
-
-ball.ondragstart = function() {
-  return false;
-};
-</script>
-<div>
--->
-
-
-
-
-
-
-<!--
-</body>
-</html>
-=========================================================================================
-<!DOCTYPE html>
-<html>
-
-<body>
-
-<center>
-<h1>Confirmation</h1>
-<form action = "/preview" method = "POST" 
-   enctype = "multipart/form-data">
-   File Uploaded Successfully. <br>
-   
-   --> 
 <div class="e">
 <br></br>
 <br></br>
    <center>
    <div class="b">
-   </br>Choose methods (OCR/TEXT) below: </div></center><!--
-</form> -->
+   </br>Choose methods (OCR/TEXT) below: </div></center>
 <center><div class="b">
 <h3>Methods</h3>
-<!--
-<form action = "/upload" method = "POST" 
-   enctype = "multipart/form-data"> -->
   <input type="checkbox" id="Method1" name="Method1" value="OCR" onclick="megafunc()">
   <label for="vehicle1"> OCR</label><br>
   <input type="checkbox" id="Method2" name="Method2" value="Text" onclick="megafunc()">
   <label for="vehicle2"> Text</label><br>
-  </br> <!-- <input type = "submit" value="Submit" name="submitter1"/> -->
-<!-- </form> -->
+  </br>
 </div>
 </center>
 
-<!--
-</body>
-</html>
-=========================================================================================
-<!DOCTYPE html>
-<html>
-<body>
-
-<center>
-
-<h1>Confirmation</h1>
-<form action = "/next" method = "POST" 
-   enctype = "multipart/form-data">
-   Method chosen successfully.<br> -->
 
 <center>
 <div class="b">
   </br> Choose the data you want below:
 
 <h3>Data</h3>
-<!-- 
-<form action = "/next" method = "POST" 
-   enctype = "multipart/form-data"> -->
   <input type="checkbox" id="Data1" name="Data1" value="Drawing Title" onclick="megafunc()">
   <label for="vehicle1"> Drawing Title</label><br>
   <input type="checkbox" id="Data2" name="Data2" value="Drawing Number" onclick="megafunc()">
@@ -280,51 +61,23 @@ ball.ondragstart = function() {
   <label for="vehicle2"> Scale</label><br>
   <input type="checkbox" id="Data8" name="Data8" value="Page" onclick="megafunc()">
   <label for="vehicle2"> Page</label><br>
-  </br><!--<input type = "submit" value="Submit" name="submitter2"/>-->
-<!-- </form> -->
+  </br>
 </div>
 </center>
 
 
-<!--
-</body>
-</html>
-=========================================================================================
-<!DOCTYPE html>
-<html>
-<body>
-
-<center>
-
-<h1>Confirmation</h1>
-<form action = "/final" method = "POST" 
-   enctype = "multipart/form-data">
-   Data chosen successfully.<br> -->
 <center>   <div class="b">
    </br>Press the button below to extract the data:
 
 <h3>Extract</h3>
-<!-- 
-<form action = "/final" method = "POST" 
-   enctype = "multipart/form-data"> -->
    <input type="submit" value="Continue" name="genbutton" onclick="this.form.submit(); this.disabled=true; this.value='working...'"/>
-<!-- </form> -->
-
 <h3></h3>
-<!-- 
-<form action = "/final" method = "POST" 
-   enctype = "multipart/form-data"> -->
    Data generation process may take a minute or two, <br> depending on size of file and choices...
 </form>
-
-<!--
-
-Do progress bar here
-
--->
 </div>
 </center>
 </div>
+
 
 <script type ="text/javascript">
 
@@ -333,49 +86,6 @@ function inputfun() {
     var blob1 = document.getElementsByName("blob1");
     blob1[0].setAttribute("data", pdfblob + "#toolbar=0&navpanes=0&scrollbar=0" + "#page=1");
     };
-    
-
-<!--
-function grey_out() {
-    if(document.getElementsByName("file")[0].value === "") {
-            document.getElementsByName("genbutton")[0].disabled = true;
-        } else {
-            document.getElementsByName("genbutton")[0].disabled = false;
-            }
-        };
-    
-window.onload=grey_out();
-
-function check1() {
-	 if(document.getElementsByName("Method1")[0].checked === false && document.getElementsByName("Method2")[0].checked === false) { 
-            document.getElementsByName("genbutton")[0].disabled = true; 
-        } else { 
-            document.getElementsByName("genbutton")[0].disabled = false;
-        }
-    };
-
-
-window.onload=check1();
-
-function check2() {
-	 if(document.getElementsByName("Data1")[0].checked === false && 
-    	document.getElementsByName("Data2")[0].checked === false &&
-    	document.getElementsByName("Data3")[0].checked === false &&
-    	document.getElementsByName("Data4")[0].checked === false &&
-    	document.getElementsByName("Data5")[0].checked === false &&
-    	document.getElementsByName("Data6")[0].checked === false &&
-    	document.getElementsByName("Data7")[0].checked === false &&
-    	document.getElementsByName("Data8")[0].checked === false
-    ) { 
-            document.getElementsByName("genbutton")[0].disabled = true; 
-        } else { 
-            document.getElementsByName("genbutton")[0].disabled = false;
-        }
-    };
-
-window.onload=check2();
-
--->
 
 function megafunc() {
     if(document.getElementsByName("file")[0].value === "")
@@ -403,147 +113,6 @@ window.onload=megafunc();
 
 </script>
 
-
-</body>
-</html>
-<!--
-=========================================================================================
-<!DOCTYPE html>
-<html> -->
-
-
-
-<!--
-=========================================================================================
-=========================================================================================
-=========================================================================================
-=========================================================================================
-
-
-<script type ="text/javascript">
-
-var select = [{{ selection[0] }}, {{ selection[1] }}, {{selection[2] }}];
-
-</script>
-<!--
-<center>
-<body>
-
-<h1>Confirmation</h1>
-<form action = "/download" method = "POST" 
-   enctype = "multipart/form-data">
-   Data files generated successfully: Download the data below
-</form> -->
-<!--
-<center>
-<h6>Download Links</h6>
-Only the buttons relating to the data you chose will work <br>
-<br><form action="/download" method="POST" 
-    enctype = "multipart/form-data">
-    OCR Data Table: <a name="/download" href="/download"></a><button class='btn btn-default' onclick="this.form.submit(); disabledown();" name="button" disabled>Download</button>
-</form>
-<br><form action = "/download1" method = "POST" 
-    enctype = "multipart/form-data">
-    Text Read Data Table: <a name="/download1" href="/download1"></a><button class='btn btn-default' onclick="this.form.submit(); disabledown1();" name="button1" disabled>Download</button>
-</form>
-<br><form action = "/download2" method = "POST" 
-    enctype = "multipart/form-data">
-    Combined Data Table: <a name="/download2" href="/download2"></a><button class='btn btn-default' onclick="this.form.submit(); disabledown2();" name="button2" disabled>Download</button>
-</form>
-
-<h3>Delete PDF + Data from Server</h3>
-<form action = "/delete" method = "POST" 
-   enctype = "multipart/form-data">
-   Delete Data From Server: <input type = "submit" value ="Delete"/>
-</form>
-
-
-<script type ="text/javascript">
-
-function success() {
-	 if(select[0]=== 1) { 
-            document.getElementsByName("button")[0].disabled = false; 
-        } else { 
-            document.getElementsByName("button")[0].disabled = true;
-        }
-    };
-    
-function disabledown() {
-    const downbut = document.getElementsByName("button")[0];
-    downbut.disabled = true;
-    setTimeout(() => {
-        downbut.disabled = false
-        }, 500);
-    };
-    
-function success1() {
-	 if(select[1]=== 1) { 
-            document.getElementsByName("button1")[0].disabled = false; 
-        } else { 
-            document.getElementsByName("button1")[0].disabled = true;
-        };
-    };
-    
-function disabledown1() {
-    const downbut1 = document.getElementsByName("button1")[0];
-    downbut1.disabled = true;
-    setTimeout(() => {
-        downbut1.disabled = false
-        }, 500);
-    };
-
-function success2() {
-	 if(select[2]=== 1) { 
-            document.getElementsByName("button2")[0].disabled = false; 
-        } else { 
-            document.getElementsByName("button2")[0].disabled = true;
-        }
-    };
-    
-function disabledown2() {
-    const downbut2 = document.getElementsByName("button2")[0];
-    downbut2.disabled = true;
-    setTimeout(() => {
-        downbut2.disabled = false
-        }, 500);
-    };
-
-window.onload=success();
-window.onload=success1();
-window.onload=success2();
-
-</script>
-</center>
-<!--
-</body>
-<center>
-
-</html>
-=========================================================================================
-<!DOCTYPE html>
-<html>
-
-<body>
-
-<center>
-<h1>Confirmation</h1>
-<form action = "/return" method = "POST" 
-   enctype = "multipart/form-data">
-   Your data has been successfully removed from the servers.<br>
-   
-   </br>If you wish to collect data from another PDF, click the button below to return to the start:
-</form> -->
-<!--
-<center>
-<h2>Return</h2>
-<b>Return Button Below</b><br>
-<br><form action = "/return" method = "POST" 
-    enctype = "multipart/form-data">
-    <button class='btn btn-default'>Return</button></a>
-</form>
-
-</form>
-</center>
 
 </body>
 </html>

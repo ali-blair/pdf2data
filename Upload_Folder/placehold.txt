@@ -1,0 +1,1 @@
+This is the folder where files will be saved temporarily whilst the data is extracted. The files will be deleted after the process is complete if the user wishes to do so.
