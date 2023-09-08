@@ -7,6 +7,8 @@ Flask has been used to generate a web app in python. The web app is to be run on
 More on Text Reading: The pdf is first cropped, then the text is read.
 
 More on OCR: The pdf is first cropped, then saved as a jpeg which then undergoes enhancements (greyscale conversion + more colouring effects) before OCR takes place to maximize effectiveness.
+
+**Currently only works for windows
 ### Roadmap
 - [x] Works for pre-defined areas on pdf page (mainly chunks in bottom right) as that was what was required for a specific document I was working with in recent times. The specific document needed chunks of data in boxes from bottom right of pdfs to be extracted.
 - [ ] Allow the user to interact further with the html page and draw boxes onto the inputted pdf (perhaps convert the input to a single jpg page as preview) to identify where exactly on the pdf the user would like to extract data from.
