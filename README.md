@@ -1,6 +1,6 @@
 # pdf2data 
 ### Description/Overview
-Flask has been used to generate a web app in python. The web app is to be run on a local machine or a server which can then be accessed by users with the generated link. The web app allows a user to input a pdf file from their local machine and select specific locations on a pdf page at which they want to extract the text/data from (this is iterated over all pages of the pdf). The user has the choice of using a text reader to extract the data from the pdf, or from optical recognition software (OCR) via tesseract and opencv, or both.
+Flask has been used to generate a web app in python. The web app is to be run on a local machine or a server which can then be accessed by users with the generated link. The web app allows a user to input a pdf file from their local machine and select specific locations on a pdf page at which they want to extract the text/data from (this is iterated over all pages of the pdf). The user has the choice of using a text reader to extract the data from the pdf, or from optical character recognition software (OCR) via pytesseract and opencv, or both.
 ### Further Notes
 - The login feature is currently under progress and the user needs to input 'admin' as the username and 'admin' as the password to have access to the app.
 
